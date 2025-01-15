@@ -1,6 +1,6 @@
 // Preset birthday date and time
 const presetBirthday = "2025-01-17T00:00:00"; // Example: January 17, 2025, at 12:00 PM
-const redirectUrl = "https://sougata.dev/hbdparo"; // Replace with your target URL
+const redirectUrl = "https://paramita-bday.github.io/hbdparo/"; // Replace with your target URL
 
 let countdownInterval;
 
