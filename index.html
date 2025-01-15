@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Countdown</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background">
+        <!-- Video/GIF background -->
+        <video autoplay muted loop playsinline preload id="backgroundVideo">
+            <source src="birthday-video.mp4" type="video/mp4">
+            <!-- Fallback image if the video doesn't load -->
+            <img src="birthday-image.jpg" alt="Birthday Celebration">
+        </video>
+    </div>
+
+    <div class="container">
+        <h1 class="modern-heading">🎉 Paramita's Birthday Countdown 🎉</h1>
+        <p id="message">Time remaining until your special day:</p>
+        <div id="countdown">
+            <span id="days">00</span> Days
+            <span id="hours">00</span> Hours
+            <span id="minutes">00</span> Minutes
+            <span id="seconds">00</span> Seconds
+        </div>
+    </div>
+        <!-- Audio element with a play button -->
+        <button id="playMusicButton">Play Music</button>
+        <audio id="backgroundMusic" loop>
+            <source src="birthday-music.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

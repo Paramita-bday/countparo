@@ -1,0 +1,215 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+/* Background Video Styling */
+#backgroundVideo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    min-width: 100%; /* Ensure the video always covers the width */
+    min-height: 100%; /* Ensure the video always covers the height */
+    transform: translate(-50%, -50%);
+    object-fit: cover; /* Ensures the video fills the screen without distortion */
+    z-index: -1;
+    background-color: #000; /* Fallback for unsupported browsers */
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+/* Heading Designs below,use it in class which one suitable for you */
+
+/* Glowing effect for the heading */
+.glow {
+    font-size: 3rem; /* Adjust as needed */
+    font-weight: bold;
+    color: #ffffff; /* Base color of the text */
+    text-align: center;
+    text-shadow: 
+        0 0 5px #ffffff, 
+        0 0 10px #ffffff, 
+        0 0 20px #ff0080, 
+        0 0 30px #ff0080, 
+        0 0 40px #8000ff, 
+        0 0 50px #8000ff, 
+        0 0 75px #ff00ff; /* Multiple layers of shadow for a glowing effect */
+    animation: glow-animation 3s infinite; /* Infinite glowing animation */
+}
+
+/* Keyframes for smooth color transitions in the glow */
+@keyframes glow-animation {
+    0% {
+        text-shadow: 
+            0 0 5px #ffffff, 
+            0 0 10px #ffffff, 
+            0 0 20px #ff0080, 
+            0 0 30px #ff0080, 
+            0 0 40px #8000ff, 
+            0 0 50px #8000ff, 
+            0 0 75px #ff00ff;
+    }
+    50% {
+        text-shadow: 
+            0 0 10px #ff00ff, 
+            0 0 20px #ff00ff, 
+            0 0 40px #8000ff, 
+            0 0 60px #8000ff, 
+            0 0 80px #ffffff, 
+            0 0 100px #ffffff;
+    }
+    100% {
+        text-shadow: 
+            0 0 5px #ffffff, 
+            0 0 10px #ffffff, 
+            0 0 20px #ff0080, 
+            0 0 30px #ff0080, 
+            0 0 40px #8000ff, 
+            0 0 50px #8000ff, 
+            0 0 75px #ff00ff;
+    }
+}
+
+/* Gradient animated text for the heading */
+.gradient-heading {
+    font-size: 3rem; /* Adjust as needed */
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(90deg, #ff0080, #8000ff, #00ffff);
+    background-clip: text;
+    -webkit-background-clip: text; /* For Safari compatibility */
+    color: transparent; /* Makes the text itself transparent, showing the gradient */
+    animation: gradient-animation 3s infinite linear; /* Smooth gradient animation */
+}
+
+/* Keyframes for gradient movement */
+@keyframes gradient-animation {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 100%;
+    }
+}
+
+/* Letter spacing animation with color transition */
+.animated-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    color: #ff0080; /* Initial text color */
+    letter-spacing: 2px; /* Start with some spacing */
+    transition: letter-spacing 0.5s ease-in-out, color 0.5s ease-in-out; /* Smooth animation for spacing and color */
+    cursor: pointer; /* Indicates interactivity */
+}
+
+.animated-heading:hover {
+    letter-spacing: 8px; /* Expands the spacing on hover */
+    color: #8000ff; /* Changes to a different color on hover */
+}
+
+/* Gradient-filled heading with a subtle pulsing effect */
+.modern-heading {
+    font-size: 2.3rem; /* Adjust size as needed */
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(45deg, #ff0080, #ff8c00, #8000ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent; /* Transparent text to reveal gradient */
+    animation: gradient-pulse 5s ease-in-out infinite;
+}
+
+/* Keyframes for subtle pulsing animation */
+@keyframes gradient-pulse {
+    0%, 100% {
+        filter: brightness(1); /* Normal brightness */
+    }
+    50% {
+        filter: brightness(1.5); /* Slightly brighter */
+    }
+}
+/* New Part */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    word-wrap: break-word;
+}
+
+#message {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Default countdown styles */
+#countdown {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: white; /* Default color */
+    transition: color 0.5s ease, text-shadow 0.5s ease; /* Smooth transition */
+}
+
+/* Glowing effect for countdown */
+.countdown-glow {
+    color: red; /* Glowing red text */
+    text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red, 0 0 40px red, 0 0 50px red;
+    animation: glow-pulse 2s infinite;
+}
+
+/* Keyframes for glowing pulse effect */
+@keyframes glow-pulse {
+    0% {
+        text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red;
+    }
+    50% {
+        text-shadow: 0 0 20px red, 0 0 40px red, 0 0 60px red;
+    }
+    100% {
+        text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red;
+    }
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #ff758c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 10px auto 0; /* Adjust the top and bottom margins */
+    position: relative;
+    top: -40px; /* Moves the button 20px upwards */
+}
+
+button:hover {
+    background-color: #ff5a6e;
+}
